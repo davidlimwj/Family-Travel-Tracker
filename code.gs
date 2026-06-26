@@ -97,6 +97,11 @@ function handleEdit(e) {
   const date = sheet.getRange(row, 1).getValue();
   const flightNo = sheet.getRange(row, 3).getValue();
 
+  if (col === 1 && date) {
+    const days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+    sheet.getRange(row, 2).setValue(days[date.getDay()]);
+  }
+
   if (!date || !flightNo || flightNo.toString().trim().toUpperCase() === "TBC") return;
 
   fetchAndFill(sheet, row, flightNo, date);
