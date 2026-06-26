@@ -1,10 +1,10 @@
 # Family Travel Tracker — Auto Flight Lookup
 
-A Google Sheets travel tracker that automatically populates flight details (times, terminals, airports) when you enter a flight number, using the AeroDataBox API via RapidAPI.
+A Google Sheets travel tracker that automatically populates flight details when you enter a flight number and date, using the AeroDataBox API via RapidAPI.
 
 ## What It Does
 
-When you type a flight number (e.g. `SQ28`) in the Flight No. column, the sheet automatically fills in:
+When you enter a date in column A, the sheet automatically fills in the day of the week. When you enter a flight number in column C, it automatically fills in:
 - Departure time (ETD)
 - Arrival time (ETA) — with `#` suffix if next-day arrival
 - Terminal (Singapore departures/arrivals only)
@@ -14,7 +14,7 @@ When you type a flight number (e.g. `SQ28`) in the Flight No. column, the sheet 
 ## Template
 
 Make a copy of the Google Sheet template here:
-[Click to copy template](https://docs.google.com/spreadsheets/d/1dK48lU3Ebqdt7aBMy_dCZ_9pm9Qb86wg25W22ogHe1k/edit?gid=0#gid=0)
+[Click to copy template](YOUR_TEMPLATE_LINK_HERE)
 
 ## Setup
 
@@ -36,8 +36,8 @@ Make a copy of the Google Sheet template here:
 - This only needs to be done once
 
 ### 4. Test It
-- In your sheet, enter a date in column A and a flight number in column C
-- Wait a few seconds — the flight details should auto-populate
+- Enter a date in column A — the day name should auto-fill in column B
+- Enter a flight number in column C — flight details should populate within a few seconds
 
 ## Sheet Structure
 
@@ -64,6 +64,7 @@ Make a copy of the Google Sheet template here:
 - Some flights (especially budget carriers) may have incomplete data and will prompt you to fill manually
 - Terminal is only populated for Singapore (SIN/XSP) departures and arrivals
 - Flight data availability depends on how far in advance the flight is
+- The airport reference sheet (DO NOT TOUCH) maps IATA codes to city and country names
 
 ## Built With
 
